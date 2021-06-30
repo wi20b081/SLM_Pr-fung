@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Server started");
 
         try {
-            //noinspection ResultOfMethodCallIgnored
+
             System.in.read();
         } catch (IOException e) {
             e.printStackTrace();
