@@ -16,11 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 14
-      uses: actions/setup-java@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
       with:
-        java-version: '14'
-        distribution: 'adopt'
+        java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: copy to staging
@@ -28,6 +27,5 @@ jobs:
     - name: upload
       uses: actions/upload-artifact@v2
       with:
-        name: RandomController
+        name: Random
         path: staging
-
